@@ -1,0 +1,909 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poopins', sans-serif;
+    background: rgb(255, 255, 255);
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_space {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.primary-btn {
+    padding: 15px 40px;
+    background: blue;
+    font-weight: bold;
+    color: white;
+}
+
+.secondary-btn {
+    padding: 15px 40px;
+    background: none;
+    border: 2px solid white;
+    font-weight: bold;
+    color: white;
+}
+
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+
+/*------------header------------*/
+header {
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+}
+
+header img {
+    margin: 20px 0;
+}
+
+header ul {
+    display: inline-block;
+}
+
+header ul li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+header ul li a {
+    color: black;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+header ul li a:hover {
+    color: blue;
+}
+
+header i {
+    margin: 0 20px;
+}
+
+header button {
+    padding: 13px 40px;
+}
+
+header .navlinks span {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    header ul {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        background: rgb(0, 79, 110);
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: center;
+        z-index: 9;
+    }
+
+    header ul li {
+        display: block;
+    }
+
+    header i {
+        color: white;
+    }
+
+    header .navlinks span {
+        color: black;
+        display: block;
+        cursor: pointer;
+        line-height: 10vh;
+        font-size: 25px;
+    }
+
+}
+
+/*------------header------------*/
+
+/* ------------home------------ */
+.home {
+    height: 100vh;
+    color: white;
+}
+
+.home img {
+    height: 100%;
+    height: 100vh;
+}
+
+.home .text {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+
+.home .text h1 {
+    font-size: 80px;
+    font-family: serif;
+    font-weight: 400;
+}
+
+.home p {
+    margin: 20px 0;
+}
+
+.home button {
+    margin-right: 20px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    position: absolute;
+    top: 40%;
+    height: 50px;
+    width: 50px;
+    background: rgba(42, 42, 43, 0.39) !important;
+    color: rgb(255, 255, 255);
+}
+
+.owl-nav .owl-prev {
+    left: 0;
+}
+
+.owl-nav .owl-next {
+    right: 0;
+}
+
+/* ------------home-------------*/
+
+/* ------------book-------------*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.book {
+    padding: 40px 0;
+    background: rgb(13, 20, 20);
+    color: white;
+}
+
+h1 {
+    font-family: serif;
+}
+
+.book h1 {
+    font-size: 28px;
+}
+
+.book h1 span {
+    color: blue;
+}
+
+.book input {
+    padding: 20px;
+}
+
+.book input:nth-last-child(1) {
+    background: blue;
+    color: white;
+}
+
+/* ------------book-------------*/
+
+/* -----------about-------------*/
+.left,
+.right {
+    width: 50%;
+    padding: 30px;
+}
+
+.top {
+    margin-top: 80px;
+}
+
+.mtop {
+    margin-top: 40px;
+}
+
+.heading h1 {
+    font-size: 100px;
+    font-weight: 500;
+    opacity: 0.1;
+    font-family: serif;
+    position: absolute;
+    top: -30px;
+}
+
+.heading h2 {
+    margin: 30px 0;
+    color: blue;
+    font-size: 45px;
+    font-family: serif;
+    font-weight: 400;
+}
+
+.heading h2 span {
+    margin: 30px 0;
+    color: rgb(0, 0, 0);
+    font-size: 45px;
+    font-family: serif;
+    font-weight: 400;
+}
+
+.about .heading h1 {
+    top: 55px;
+}
+
+.about {
+    position: relative;
+}
+
+.about .left {
+    margin-top: 30px;
+}
+
+.about p {
+    font-size: 15px;
+}
+
+.about button {
+    margin: 30px 0;
+}
+
+/* -----------about-------------*/
+
+
+/* ----------counter------------*/
+.counter {
+    background-image: url("images/background-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100%;
+    color: white;
+}
+
+.counter .grid {
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    place-items: center;
+    padding-top: 60px;
+}
+
+.counter h1 {
+    font-size: 50px;
+}
+
+.counter hr {
+    width: 50%;
+    margin: 10px auto;
+    background: blue;
+    height: 2px;
+    border: none;
+}
+
+/* ----------counter------------*/
+
+
+/* -----------rooms-------------*/
+.rooms {
+    position: relative;
+}
+
+.rooms .text {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-top: none;
+    padding: 30px;
+}
+
+.rooms i {
+    font-size: 12px;
+    color: rgb(255, 166, 0);
+    margin: 15px 0;
+    margin-right: 5px;
+}
+
+.rooms p {
+    margin: 20px 0;
+    opacity: 0.7;
+}
+
+.rooms h3 {
+    font-size: 30px;
+    line-height: 20px;
+    margin-left: 20px;
+    font-size: 500;
+    color: blue;
+}
+
+.rooms h3 span {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+.rooms .owl-carousel1 .owl-nav .owl-prev,
+.rooms .owl-carousel1 .owl-nav .owl-next {
+    position: absolute;
+    top: -20%;
+    height: 50px;
+    width: 50px;
+    background: rgb(0, 0, 255) !important;
+    color: white;
+}
+
+.rooms .owl-nav .owl-prev {
+    left: 90%;
+}
+
+.rooms .owl-nav .owl-next {
+    right: -2%;
+}
+
+/*------------rooms-------------*/
+
+
+/*-----------gallery------------*/
+.gallery {
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .img {
+    position: relative;
+}
+
+.gallery .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 255, 0.664);
+    width: 355px;
+    height: 351px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.60s;
+}
+
+.overlay {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 0.60s;
+}
+
+.gallery span {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.overlay h3 {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.gallery .items:hover .overlay,
+.gallery .items:hover .img::after {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gallery .owl-carousel1 .owl-nav .owl-prev,
+.gallery .owl-carousel1 .owl-nav .owl-next {
+    position: absolute;
+    top: -50%;
+    height: 50px;
+    width: 50x;
+    background: rgb(0, 0, 255) !important;
+    color: white;
+}
+
+.gallery .owl-nav .owl-prev {
+    left: 85%;
+}
+
+.gallery .owl-nav .owl-next {
+    right: 5%;
+}
+
+/*-----------gallery------------*/
+
+
+/*----------services------------*/
+.services {
+    position: relative;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.services .left {
+    padding: 30px 0;
+}
+
+.services .box {
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    text-align: center;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.services .box .text {
+    padding: 30px 0;
+    border: 1px dashed white;
+}
+
+.services i {
+    font-size: 50px;
+    color: blue;
+    transition: 0.5s;
+}
+
+.services h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.services img {
+    width: 100%;
+    height: 100%;
+}
+
+.services .box:hover {
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.services .box:hover i,
+.services .box:hover h3 {
+    color: white;
+
+}
+
+/*----------services------------*/
+
+
+/*----------costomer------------*/
+.Customer {
+    background-image: url(images/background-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.Customer .container {
+    max-width: 70%;
+}
+
+.Customer .item {
+    padding: 10% 0;
+}
+
+.Customer i {
+    width: 100px;
+    height: 100%;
+    background: rgba(21, 0, 255, 0.438);
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.Customer p {
+    line-height: 30px
+}
+
+.Customer h3 {
+    margin-top: 20px;
+    color: blue;
+}
+
+.Customer span {
+    font-size: 15px;
+}
+
+.owl-carousel2 .owl-dots {
+    position: absolute;
+    bottom: 70px;
+    left: 46.6%;
+}
+
+.owl-carousel2 .owl-dots i {
+    color: blue;
+}
+
+.owl-carousel2 .owl-dots i:hover button {
+    color: blue !important;
+}
+
+.owl-carousel2 span {
+    border: 2px solid white;
+    background: transparent !important;
+}
+
+.owl-carousel2 .active span {
+    background: blue !important;
+    border: 2px solid blue;
+}
+
+/*----------costomer------------*/
+
+/*------------news--------------*/
+.news {
+    position: relative;
+}
+
+.news i {
+    color: blue;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.news label {
+    margin-top: 12px;
+    margin-right: 20px;
+}
+
+.news .left {
+    padding: 30px 0;
+    width: 65%;
+}
+
+.news .right {
+    height: 35%;
+}
+
+.news img {
+    width: 100%;
+}
+
+.news .item p {
+    padding-top: 20px;
+    border-top: 1px solid rgba(119, 119, 128, 0.425);
+}
+
+.news .box {
+    border-bottom: 1px solid rgba(119, 119, 128, 0.425);
+    padding: 40px 0;
+}
+
+.news .box:nth-child(1) {
+    padding-top: 0;
+}
+
+.news:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.news .box img {
+    width: 110px;
+    height: 114px;
+}
+
+.news .stext {
+    padding: 0 0 0 20px;
+}
+
+/*------------news--------------*/
+
+
+/*-------newsletter-------------*/
+.newsletter {
+    position: relative;
+}
+
+.newsletter .container {
+    background: blue;
+    padding: 40px 30px;
+    position: absolute;
+    top: -70px;
+    left: 8%;
+    width: 100%;
+}
+
+.newsletter h1 {
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    padding: 20px;
+}
+
+.newsletter input:nth-last-child(2) {
+    width: 50%;
+    color: white;
+    background: rgba(177, 177, 255, 0.404);
+    font-weight: bold;
+}
+
+.newsletter input:nth-last-child(1) {
+    margin-left: 20px;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*-------newsletter-------------*/
+
+
+/*---------footer---------------*/
+footer {
+    background: #282834;
+    color: aliceblue;
+    padding: 10% 0 5% 0;
+}
+
+footer .grid {
+    grid-template-columns: repeat 6fr 3fr;
+}
+
+footer p {
+    color: aliceblue;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+footer .icon i {
+    margin: 20px 20px 20px 0;
+    color: aliceblue;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer li {
+    margin-bottom: 20px;
+}
+
+footer i {
+    color: blue;
+    margin: 20px 0;
+    margin-right: 20px;
+}
+
+footer label {
+    margin: 20px 0;
+}
+
+.legal {
+    padding: 15px 0;
+    background: #282834;
+    color: aliceblue;
+    border-top: 1px solid rgba(119, 119, 128, 0.527);
+}
+
+/*---------footer---------------*/
+
+
+@media only screen and (max-width: 768px) {
+    .home {
+        color: white;
+        height: 130vh;
+    }
+
+    .home img {
+        width: 100%;
+        height: 130vh;
+    }
+
+
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        background: rgba(42, 42, 43, 0.39) !important;
+        color: rgb(255, 255, 255);
+    }
+
+    .owl-nav .owl-prev {
+        left: -1.5;
+    }
+
+    .owl-nav .owl-next {
+        right: 0;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .book {
+        height: 95vh;
+    }
+
+    .book h1 {
+        margin-bottom: 20px;
+    }
+
+    .container.flex,
+    .book .flex_space {
+        flex-direction: column;
+    }
+
+    .book .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .counter {
+        height: 60vh;
+    }
+
+    .counter .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .owl-carousel .owl-nav .owl-prev {
+        left: 80%;
+    }
+
+    .gallery .img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 255, 0.664);
+        width: 655px;
+        height: 651px;
+        z-index: 2;
+        opacity: 0;
+        transition: 0.60s;
+    }
+
+    .gallery span {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        border: 3px solid white;
+        transition: 0.60s;
+    }
+
+    .gallery .owl-nav .owl-prev {
+        left: 75%;
+    }
+
+    .rooms .owl-carousel1 .owl-nav .owl-prev,
+    .rooms .owl-carousel1 .owl-nav .owl-next {
+        top: -25%;
+    }
+
+    .gallery .owl-carousel1 .owl-nav .owl-prev,
+    .gallery .owl-carousel1 .owl-nav .owl-next {
+        top: -25%;
+    }
+
+    .services .flex_space {
+        flex-direction: column;
+    }
+
+    .Customer {
+        height: 130vh;
+    }
+
+    .Customer .container {
+        max-width: 81%;
+    }
+
+    .owl-carousel2 .owl-dots {
+        bottom: 0;
+        left: 38.5%;
+    }
+
+    .news .content.flex {
+        flex-direction: column;
+    }
+
+    .news .left {
+        padding: 30px 0;
+        width: 100%;
+    }
+
+    .news .right {
+        width: 100%;
+    }
+
+    .newsletter {
+        position: relative;
+        background: blue;
+    }
+
+    .newsletter .container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 30px;
+        position: relative;
+    }
+
+    .newsletter .flex_space {
+        flex-direction: column;
+    }
+
+    .newsletter input:nth-last-child(2) {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .newsletter input:nth-last-child(1) {
+        margin: 0;
+        width: 55%;
+    }
+
+    footer .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
